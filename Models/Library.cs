@@ -28,6 +28,7 @@ namespace ConsoleLibrary.Models
                 Console.WriteLine($"Title: {book.Title}");
                 Console.WriteLine($"Author: {book.Author}");
                 Console.WriteLine($"Pages: {book.Pages}");
+                Console.WriteLine($"-----------------------------------------------------");
                 bookCount++;
             }
         }
