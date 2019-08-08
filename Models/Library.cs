@@ -24,7 +24,7 @@ namespace ConsoleLibrary.Models
             int bookCount = 0;
             foreach (var book in Books)
             {
-                Console.WriteLine($"{bookCount}.");
+                Console.WriteLine($"ID: {bookCount}");
                 Console.WriteLine($"Title: {book.Title}");
                 Console.WriteLine($"Author: {book.Author}");
                 Console.WriteLine($"Pages: {book.Pages}");
