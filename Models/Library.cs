@@ -10,14 +10,25 @@ namespace ConsoleLibrary.Models
 
         public void CheckOut()
         {
-
+            Console.WriteLine("Which book number?:");
+            int index;
+            bool isIndex = false;
+            while (!isIndex)
+            {
+                Int32.TryParse(Console.ReadLine(), out index);
+            }
         }
 
         public void ViewBooks()
         {
+            int bookCount = 0;
             foreach (var book in Books)
             {
-                Console.WriteLine(book);
+                Console.WriteLine($"{bookCount}.");
+                Console.WriteLine($"Title: {book.Title}");
+                Console.WriteLine($"Author: {book.Author}");
+                Console.WriteLine($"Pages: {book.Pages}");
+                bookCount++;
             }
         }
         public Library()
