@@ -11,7 +11,8 @@ namespace ConsoleLibrary
             Book book1 = new Book("Harry Potter", "JK Rowling", 400);
             Book book2 = new Book("Dune", "Frank Herbert", 500);
             Book book3 = new Book("Patsy", "Nicole Benn-Dennis", 250);
-            //TODO add those books to your library            
+            //TODO add those books to your library
+            Books.add
         }
 
         public void Run()

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace ConsoleLibrary.Models
@@ -6,5 +7,22 @@ namespace ConsoleLibrary.Models
     {
         //TODO Create the properties and methods that this class will need
         public List<Book> Books { get; set; }
+
+        public void CheckOut()
+        {
+
+        }
+
+        public void ViewBooks()
+        {
+            foreach (var book in Books)
+            {
+                Console.WriteLine(book);
+            }
+        }
+        public Library()
+        {
+            Books = new List<Book>();
+        }
     }
 }
