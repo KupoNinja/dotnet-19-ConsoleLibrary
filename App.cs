@@ -36,8 +36,8 @@ namespace ConsoleLibrary
         public void DisplayMenu()
         {
             Console.WriteLine("1. View Books");
-            Console.WriteLine("2. Return a Book");
-            Console.WriteLine("3. Leave the Library");
+            Console.WriteLine("3. Return a Book");
+            Console.WriteLine("4. Leave the Library");
             Console.WriteLine("Please enter a number:");
             HandleUserInput();
         }
@@ -50,10 +50,10 @@ namespace ConsoleLibrary
                 case "1":
                     Library.ViewBooks();
                     break;
-                case "2":
+                case "3":
                     // Library.ReturnBook();
                     break;
-                case "3":
+                case "4":
                     InLibrary = false;
                     break;
                 default:

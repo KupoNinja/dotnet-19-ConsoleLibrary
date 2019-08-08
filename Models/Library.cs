@@ -19,9 +19,32 @@ namespace ConsoleLibrary.Models
             }
         }
 
-        public void ViewBooks()
+        public void ReturnBook()
         {
-            int bookCount = 0;
+            Console.WriteLine("Please enter the book title you are returning.");
+            Book bookToReturn = null;
+            while (bookToReturn == null)
+            {
+                string bookTitle = Console.ReadLine().ToUpper();
+                bookToReturn = Books.Find(b => b.Title.ToUpper() == bookTitle)
+                // NOTE Our user is stuck in this until they type a valid book title
+                // if (bookToReturn == null) {
+                //     Console.WriteLine("Sorry we couldn't find that book.\nEnter 'back'");
+                // }
+            }
+            bookToReturn.IsAvailable = true;
+            Console.WriteLine($"Thanks for returning {bookToReturn.Title}!");
+        }
+
+        public void ViewBooks(bool onlyAvailable = false)
+        {
+            int bookCount = 1;
+            List<Book> books = Books;
+
+            if (onlyAvailable)
+            {
+                books = books.FindAll(b => b.IsAvailable);
+            }
             foreach (var book in Books)
             {
                 Console.WriteLine($"ID: {bookCount}");
